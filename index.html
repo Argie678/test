@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>College Aptitude Test Portal - Login</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+<div class="application-container">
+    <form method="POST">
+        <div class="header-box">
+            <h1>College Aptitude Test Portal</h1>
+            <img src="./cpu.jfif" alt="logo" class="logo"> 
+        </div>
+
+        <h3>Login</h3>
+
+        <div class="input-box">
+           <input type="email" name="email" value="<?= htmlspecialchars($email ?? '') ?>" placeholder="Enter your email" required>
+            <span style="color:red;"><?= $errors['email'] ?? '' ?></span>
+           <span style="color:red;"><?= $errors['email'] ?? '' ?></span>
+        </div>
+
+        <div class="input-box">
+            <input type="password" name="password" placeholder="Enter your password" required>
+            <span style="color:red;"><?= $errors['password'] ?? '' ?></span>
+        </div>
+
+        <div class="message-box">
+        </div>
+
+        <div class="remember-forgot">
+            <label>
+                <input type="checkbox" name="remember">
+                Remember me
+            </label>
+            <a href="#">Forgot Password?</a>
+        </div>
+
+        <div class="login-button">
+            <button type="submit">Login</button>
+        </div>
+    </form>
+    <br>
+    <div class="apply-button">
+        <h3>For New Applicants</h3>
+    <button class="apply" onclick="window.location.href='./public/application.php'; return false;">Apply</button>
+    </div>
+</div>
+
+</body>
+</html>
